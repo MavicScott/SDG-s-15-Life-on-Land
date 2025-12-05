@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action - SDG 15</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">SDG 15 🌱</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="action.html">Take Action</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div id="auth-links">
+                <a href="#" id="login-link" class="secondary-button" style="margin: 0; padding: 8px 15px;">Log In</a>
+                <a href="#" id="logout-link" class="secondary-button" style="display: none; margin: 0; padding: 8px 15px;">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main class="content-block">
+        <h1>Take Action: Become a Steward of the Land</h1>
+        <p>Your involvement is crucial. Choose a local event or report an urgent environmental threat in your community.</p>
+
+        <section id="events" style="margin-top: 40px;">
+            <h2>Local Conservation Events</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Mangrove Reforestation Drive</h3>
+                    <p>📅 **Date:** Saturday, December 13th</p>
+                    <p>📍 **Location:** Coastal Reserve Area</p>
+                    <p style="margin-top: 10px; font-weight: bold;">Need 20 volunteers.</p>
+                    <a href="#" class="cta-button" style="background-color: var(--color-leaf-green);">Sign Up</a>
+                </div>
+                <div class="stat-card">
+                    <h3>Community Wildlife Watch Cleanup</h3>
+                    <p>📅 **Date:** Sunday, December 14th</p>
+                    <p>📍 **Location:** Central Forest Trail</p>
+                    <p style="margin-top: 10px; font-weight: bold;">Removing illegal waste from protected habitat.</p>
+                    <a href="#" class="cta-button" style="background-color: var(--color-leaf-green);">Sign Up</a>
+                </div>
+            </div>
+        </section>
+
+        <hr style="margin: 60px 0;">
+
+        <section id="report-issue">
+            <div class="form-container">
+                <h2>Report an Environmental Issue</h2>
+                <p>Help us protect life on land by reporting local threats and degradation.</p>
+
+                <form id="issueReportForm">
+                    <div class="form-group">
+                        <label for="issueType">Type of Issue:</label>
+                        <select id="issueType" name="issueType" required>
+                            <option value="">-- Select Issue Type --</option>
+                            <option value="deforestation">Illegal Logging/Deforestation</option>
+                            <option value="dumping">Illegal Waste Dumping</option>
+                            <option value="poaching">Suspected Poaching Activity</option>
+                            <option value="pollution">Water/Land Pollution</option>
+                            <option value="other">Other Habitat Destruction</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location (Closest Address or Landmark):</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Near Oak Creek Trail, Marker 5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Details:</label>
+                        <textarea id="details" name="details" rows="4" placeholder="Describe the issue, frequency, and severity." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Email (Optional, for follow-up):</label>
+                        <input type="email" id="contact" name="contact" placeholder="name@example.com">
+                    </div>
+
+                    <button type="submit" class="cta-button report-button">Submit Report</button>
+                    <p id="formMessage" style="margin-top: 15px; font-weight: bold;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SDG 15 Prototype | Built with HTML, CSS, and JS</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

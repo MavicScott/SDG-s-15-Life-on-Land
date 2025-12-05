@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Data - SDG 15</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific layout for Discover page: Uses Grid for Sidebar/Map layout on desktop */
+        
+        #discover-page-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Desktop layout: Sidebar (300px) and Map (rest of the space) */
+        
+        @media (min-width: 900px) {
+            #discover-page-layout {
+                grid-template-columns: 300px 1fr;
+            }
+            #map-container {
+                grid-column: 2 / 3;
+            }
+            #data-dashboard {
+                grid-column: 1 / 2;
+            }
+        }
+        /* Ensures sidebar card elements stack properly on desktop */
+        
+        #data-dashboard .stat-card {
+            min-width: unset;
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">SDG 15 🌱</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="action.html">Take Action</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div id="auth-links">
+                <a href="#" id="login-link" class="secondary-button" style="margin: 0; padding: 8px 15px;">Log In</a>
+                <a href="#" id="logout-link" class="secondary-button" style="display: none; margin: 0; padding: 8px 15px;">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="discover-page-layout">
+
+        <section id="map-container" style="padding: 20px; grid-column: 1 / -1;">
+            <h1>Local Ecosystem View</h1>
+            <p>Interactive data showing forest cover, protected zones, and biodiversity hotspots. [Image of an interactive map showing forest cover and biodiversity hotspots]
+            </p>
+            <div id="map-placeholder" style="height: 500px; width: 100%; margin: 20px 0;">
+                <img src="https://via.placeholder.com/800x500?text=Interactive+Biodiversity+Map+Prototype" alt="Interactive Map Placeholder">
+            </div>
+        </section>
+
+        <aside id="data-dashboard" style="background-color: var(--color-paper-white); padding: 20px; border-radius: 12px; height: fit-content;">
+            <h2>Regional Metrics</h2>
+
+            <div class="stat-card">
+                <h3>3</h3>
+                <p>Local endangered species identified</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>14%</h3>
+                <p>Region designated as Protected Area</p>
+            </div>
+
+            <a href="learn.html" class="secondary-button" style="width: 100%; text-align: center;">View Species Profiles</a>
+
+            <hr style="margin: 30px 0;">
+
+            <h3>Map Filters</h3>
+            <div class="filter-group" style="margin-top: 15px; text-align: left;">
+                <label><input type="checkbox" checked> Forest Cover Change</label><br>
+                <label><input type="checkbox"> Protected Areas</label><br>
+                <label><input type="checkbox" checked> Biodiversity Hotspots</label><br>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SDG 15 Prototype | Built with HTML, CSS, and JS</p>
+    </footer>
+</body>
+
+</html>

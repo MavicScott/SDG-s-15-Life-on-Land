@@ -1,0 +1,358 @@
+/* --- 1. COLOR VARIABLES --- */
+
+:root {
+    --color-forest-green: #1E8449;
+    /* Primary CTA, Active links */
+    --color-earth-brown: #5D4037;
+    /* Headers, secondary text, footer */
+    --color-leaf-green: #38C172;
+    /* Hover states, card accents */
+    --color-background-light: #F8F9FA;
+    /* Light page background */
+    --color-paper-white: #FFFFFF;
+    /* Card and header backgrounds */
+    --color-text-dark: #212529;
+    /* Body text */
+    --color-alert-red: #D9534F;
+    /* Report button, danger status */
+}
+
+
+/* --- 2. GLOBAL RESET & TYPOGRAPHY --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-background-light);
+}
+
+h1,
+h2 {
+    color: var(--color-earth-brown);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+
+/* Base content padding and centering */
+
+.content-block {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* --- 3. NAVIGATION (REUSABLE COMPONENT) --- */
+
+header {
+    background-color: var(--color-paper-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-forest-green);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    padding: 10px 15px;
+    margin: 0 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-forest-green);
+    border-bottom: 2px solid var(--color-forest-green);
+}
+
+
+/* --- 4. BUTTONS & CTAs --- */
+
+.cta-button,
+.secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button {
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-white);
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-leaf-green);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--color-forest-green);
+    border: 2px solid var(--color-forest-green);
+    margin-top: 15px;
+}
+
+.secondary-button:hover {
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-white);
+}
+
+
+/* --- 5. CARD COMPONENTS (Stats, Events, Info) --- */
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allows wrapping on small screens */
+}
+
+.stat-card {
+    background-color: var(--color-paper-white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--color-leaf-green);
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: var(--color-forest-green);
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+
+/* --- 6. PROTOTYPE PREVIEW & MAP PLACEHOLDER (index.html, discover.html) --- */
+
+#prototype-preview {
+    text-align: center;
+}
+
+#map-placeholder {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    background-color: #A9D18E;
+    /* Light green map background placeholder */
+    margin: 30px auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* --- 7. FORM STYLING (action.html) --- */
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-paper-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-forest-green);
+    outline: none;
+}
+
+.report-button {
+    background-color: var(--color-alert-red);
+}
+
+.report-button:hover {
+    background-color: #C9302C;
+}
+
+
+/* --- 8. LEARN PAGE COMPONENTS (learn.html) --- */
+
+.species-grid {
+    display: grid;
+    /* Default to 1 column on small screens */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.info-card {
+    background-color: var(--color-paper-white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(30, 132, 73, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.species-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.status {
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.alert-red {
+    color: var(--color-alert-red);
+    background-color: rgba(217, 83, 79, 0.1);
+}
+
+.forest-green {
+    color: var(--color-forest-green);
+    background-color: rgba(30, 132, 73, 0.1);
+}
+
+
+/* --- 9. FOOTER --- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-earth-brown);
+    color: var(--color-background-light);
+    font-size: 0.9em;
+}
+
+
+/* --- 10. MOBILE RESPONSIVENESS (Media Queries) --- */
+
+
+/* Tablet View (650px and up) */
+
+@media screen and (min-width: 650px) {
+    .species-grid {
+        /* Changes to 2 equal columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Desktop View (1000px and up) */
+
+@media screen and (min-width: 1000px) {
+    .species-grid {
+        /* Changes to 3 equal columns on desktop */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* General Mobile adjustments */
+
+@media (max-width: 768px) {
+    /* Hide standard nav links on smaller screens */
+    nav ul {
+        display: none;
+    }
+    /* Stack stat cards vertically */
+    .stats-grid {
+        flex-direction: column;
+    }
+    .stat-card {
+        min-width: 100%;
+    }
+    .content-block {
+        padding: 40px 15px;
+    }
+    /* Map placeholder takes less vertical space on mobile */
+    #map-placeholder {
+        height: 250px;
+        /* --- Add this to your style.css --- */
+        /* 2.5. NAVIGATION AUTH LINKS */
+        /* Ensure the auth links are aligned with the main links */
+        #auth-links {
+            margin-left: 20px;
+        }
+        /* Update Nav for responsive display of all elements */
+        @media (max-width: 768px) {
+            nav {
+                /* Align items differently on small screens if you want to show the login button */
+                justify-content: space-around;
+            }
+            nav ul {
+                /* Hide the main navigation links */
+                display: none;
+            }
+            /* ... (rest of the media query code remains the same) ... */
+        }
+    }
+}

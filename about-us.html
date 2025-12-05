@@ -5,168 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - SDG 15</title>
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: url('https://www.celebritycruises.com/blog/content/uploads/2024/04/rainforest-destinations-iguazu%CC%81-national-park-argentinabrazil-1024x713.jpg') no-repeat center center/cover;
-            min-height: 100vh;
-            overflow-x: hidden;
-            color: #fff;
-            position: relative;
-        }
-        /* Overlay */
-        
-        .overlay {
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(3px);
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-        
-        header {
-            position: relative;
-            text-align: center;
-            padding: 80px 20px;
-            z-index: 2;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            text-shadow: 0 0 25px #8aff9c;
-        }
-        
-        nav {
-            margin-top: 20px;
-        }
-        
-        nav a {
-            color: #ffffff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border: 2px solid #c8ffc8;
-            border-radius: 8px;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        
-        nav a:hover {
-            background: #b5ffb5;
-            color: #000;
-            box-shadow: 0 0 20px #8cff8c;
-        }
-        
-        section.about {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.45);
-            border-radius: 10px;
-        }
-        
-        h2,
-        h3 {
-            text-align: center;
-            text-shadow: 0 0 10px #0f0;
-        }
-        
-        p,
-        ul {
-            font-size: 1.1rem;
-            text-align: center;
-            margin-top: 15px;
-        }
-        
-        ul li {
-            margin: 8px 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid #2ecc71;
-            z-index: 2;
-            position: relative;
-        }
-        /* Floating particles */
-        
-        .particle {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background: #aaffaa;
-            border-radius: 50%;
-            animation: float 6s infinite ease-in-out;
-            opacity: 0.8;
-            z-index: 1;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-60px) scale(1.3);
-            }
-            100% {
-                transform: translateY(0) scale(1);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="overlay"></div>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">SDG 15 🌱</div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="action.html">Take Action</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+                <div id="auth-links">
+                    <a href="#" id="login-link" class="secondary-button" style="margin: 0; padding: 8px 15px;">Log In</a>
+                    <a href="#" id="logout-link" class="secondary-button" style="display: none; margin: 0; padding: 8px 15px;">Log Out</a>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Floating particles -->
-    <div class="particle" style="top: 85%; left: 20%; animation-delay: 0s;"></div>
-    <div class="particle" style="top: 60%; left: 50%; animation-delay: 1s;"></div>
-    <div class="particle" style="top: 70%; left: 80%; animation-delay: 2s;"></div>
-    <div class="particle" style="top: 40%; left: 30%; animation-delay: 3s;"></div>
-    <div class="particle" style="top: 50%; left: 10%; animation-delay: 4s;"></div>
+        <main class="content-block">
+            <h1>Our Mission: Protecting Life on Land</h1>
+            <p class="lead" style="font-size: 1.2em; color: var(--color-earth-brown);">We are a dedicated team of environmentalists and developers working to mobilize local action to achieve Sustainable Development Goal 15.</p>
 
-    <header data-aos="fade-down">
-        <h1>About Us</h1>
-        <nav data-aos="zoom-in" data-aos-delay="300">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-        </nav>
-    </header>
+            <section id="mission" style="margin-top: 40px;">
+                <h2>The Project Vision</h2>
+                <p>This application was created to bridge the gap between global conservation goals and local community action. By providing clear data visualizations and simple **reporting tools**, we empower residents to become the primary protectors of
+                    their natural environment.</p>
+            </section>
 
-    <section class="about" data-aos="fade-up" data-aos-delay="500">
-        <h2>Our Mission</h2>
-        <p>We aim to raise awareness about sustainable land use and environmental conservation. We provide tools to track personal and community health to promote a sustainable lifestyle.</p>
+            <section id="team" style="margin-top: 40px;">
+                <h2>Meet the Team</h2>
+                <div class="stats-grid">
 
-        <h3>Vemon Squad</h3>
-        <ul>
-            <li>Vismanos Mavic Soctt P. - Project Lead</li>
-            <li>Oyanon Jefferson K. - Environmental Specialist</li>
-            <li>Omogtal Charlie A. - Developer</li>
-        </ul>
-    </section>
+                    <div class="stat-card" style="border-left: 5px solid var(--color-earth-brown);">
+                        <img src="https://via.placeholder.com/150?text=Team+Leader" alt="Team Leader" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                        <h3>Sophia Rodriguez</h3>
+                        <p style="font-weight: bold;">Project Lead & Strategist</p>
+                    </div>
 
-    <footer data-aos="fade-up" data-aos-delay="700">
-        <p>&copy; 2025 Life on Land Project | SDG 15</p>
-    </footer>
+                    <div class="stat-card">
+                        <img src="https://via.placeholder.com/150?text=Developer" alt="Team Member 1" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                        <h3>Alex Rivera</h3>
+                        <p>Lead Developer & UI/UX Designer</p>
+                    </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
+                    <div class="stat-card">
+                        <img src="https://via.placeholder.com/150?text=Conservationist" alt="Team Member 2" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+                        <h3>Dr. Jamie Chen</h3>
+                        <p>SDG 15 Specialist & Content Lead</p>
+                    </div>
+                </div>
+            </section>
 
-</body>
+            <<section id="contact" style="margin-top: 40px; text-align: center;">
+                <h2>Get In Touch</h2>
+                <p>For partnerships, data inquiries, or support, please email us:</p>
+
+                <a href="mailto:info@sdg15app.org" class="secondary-button">Contact Our Team</a>
+                </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 SDG 15 Prototype | Built with HTML, CSS, and JS</p>
+        </footer>
+    </body>
 
 </html>
